@@ -4,8 +4,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./assets/style.css">
+    <!--
+    <link rel="stylesheet" href="/assets/style.css">
     </link>
+-->
 
     <!-- Listrak Analytics - Javascript Framework -->
     <script type="text/javascript">
@@ -25,7 +27,41 @@
 
 <body>
     
+    <div>
+        <h2>Sign up for our newsletter.</h2>
+    </div>
+    <form id="newsletterSignup" action="https://lestien.com"><input type="email" id="emailInput" placeholder="email@address.com">
+        <input type="text" id="firstName" placeholder="First Name"> <input type="text" id="lastName"
+            placeholder="Last Name"> <input type="text" id="mobilePhone" placeholder="000-000-0000">
+        <fieldset>
+            <legend>Select your collection preference.</legend> <input value="forHim" id="pref" type="radio"
+                name="preference"> <label for="forHim">For Him</label> <input value="forHer" id="pref" type="radio"
+                name="preference"> <label for="forHer">For Her</label> <input checked="checked" type="radio" id="pref"
+                value="both" name="preference"> <label for="both">Both</label>
+        </fieldset><button class="btn btn--submit" type="submit" id="btnsubmit">Sign Up</button>
+    </form>
+    <script>
 
+        (function () {
+            if (typeof _ltk == 'object') { ltkCode(); } else { (function (d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d); else { e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) { if (e.propertyName == 'ltkAsyncProperty') { d(); } }); } })(function () { ltkCode(); }); } function ltkCode() {
+                _ltk_util.ready(function () {
+
+                    _ltk.Signup.New('lestienEmailSubscription', 'emailInput', _ltk.Signup.TYPE.DEFAULT, 'btnsubmit', 'email');
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'firstName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'lastName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'mobilePhone');
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'pref');
+
+
+
+                })
+            }
+        })();
+
+    </script>
+    <!--
     <main id="wrapper" class="content" role="main">
 
         <form id="newsletterSignup" onsubmit="goHome()">
@@ -170,7 +206,7 @@
 
 
     </script>
-
+-->
 
 
 </body>
