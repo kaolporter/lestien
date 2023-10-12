@@ -1,0 +1,214 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!--
+    <link rel="stylesheet" href="/assets/style.css">
+    </link>
+-->
+
+    <!-- Listrak Analytics - Javascript Framework -->
+    <script type="text/javascript">
+        (function (d, tid, vid) {
+            if (typeof _ltk != 'undefined') return; var js = d.createElement('script'); js.id = 'ltkSDK';
+            js.src = "https://cdn.listrakbi.com/scripts/script.js?m=" + tid + "&v=" + vid;
+            d.querySelector('head').appendChild(js);
+        })(document, 'hOGQNcQP0LQB', '1');
+    </script>
+    <script>
+        function goHome() {
+            console.log("change page test");
+            window.location.href = "https://lestien.com";
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div>
+        <h2>Sign up for our newsletter.</h2>
+    </div>
+    <form id="newsletterSignup" action="https://lestien.com"><input type="email" id="emailInput" placeholder="email@address.com">
+        <input type="text" id="firstName" placeholder="First Name"> <input type="text" id="lastName"
+            placeholder="Last Name"> <input type="text" id="mobilePhone" placeholder="000-000-0000">
+        <fieldset>
+            <legend>Select your collection preference.</legend> <input value="forHim" id="pref" type="radio"
+                name="preference"> <label for="forHim">For Him</label> <input value="forHer" id="pref" type="radio"
+                name="preference"> <label for="forHer">For Her</label> <input checked="checked" type="radio" id="pref"
+                value="both" name="preference"> <label for="both">Both</label>
+        </fieldset><button class="btn btn--submit" type="submit" id="btnsubmit">Sign Up</button>
+    </form>
+    <script>
+
+        (function () {
+            if (typeof _ltk == 'object') { ltkCode(); } else { (function (d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d); else { e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) { if (e.propertyName == 'ltkAsyncProperty') { d(); } }); } })(function () { ltkCode(); }); } function ltkCode() {
+                _ltk_util.ready(function () {
+
+                    _ltk.Signup.New('lestienEmailSubscription', 'emailInput', _ltk.Signup.TYPE.DEFAULT, 'btnsubmit', 'email');
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'firstName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'lastName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'mobilePhone');
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'pref');
+
+
+
+                })
+            }
+        })();
+
+    </script>
+    <!--
+    <main id="wrapper" class="content" role="main">
+
+        <form id="newsletterSignup" onsubmit="goHome()">
+            <div id="pref-center-wrapper" class="ltk-clearfix">
+                <div class="ltk-pref-content ltk-clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-5 mb-3 text-align-center text-align-md-left">
+                                <h1>Sign up for our newsletter.</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="input-container">
+                            <div class="label">
+                                <label for="emailInput">Email Address</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-sm-3 mt-2 mb-3">
+                                    <div class="ltkpref-form-control">
+                                        <input placeholder="email@address.com" id="emailInput" type="email"
+                                            tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">
+                                <label for="firstName">First Name</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-sm-3 mt-2 mb-3">
+                                    <div class="ltkpref-form-control">
+                                        <input placeholder="First Name" id="firstName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="input-container">
+                            <div class="label">
+                                <label for="lastName">Last Name</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-sm-3 mt-2 mb-3">
+                                    <div class="ltkpref-form-control">
+                                        <input placeholder="Last Name" id="lastName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-container">
+                            <div class="label">
+                                <label for="mobilePhone">Mobile Number</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-sm-3 mt-2 mb-3">
+                                    <div class="ltkpref-form-control">
+                                        <input placeholder="000-000-0000" id="mobilePhone" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <div class="input-container">
+                                <div class="label">
+                                    <legend>Preferred Collections</legend>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-auto mt-sm-3 mt-2 mb-md-3">
+                                        <div class="option radio ltk-clearfix">
+
+                                            <input name="preference" type="radio" id="forHim" value="forHim"
+                                                tabindex="0" class>
+                                            <label for="forHim">
+                                                <span>For Him</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto mt-sm-3 mt-2 mb-md-3">
+                                        <div class="option radio ltk-clearfix">
+
+                                            <input name="preference" type="radio" id="forHer" value="forHer"
+                                                tabindex="0" class>
+                                            <label for="forHer">
+                                                <span>For Her</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto mt-sm-3 mt-2 mb-md-3">
+                                        <div class="option radio ltk-clearfix">
+
+                                            <input name="preference" type="radio" value="both" id="both" tabindex="0"
+                                                class checked>
+                                            <label for="both">
+                                                <span>Both</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                        <div class="container mt-sm-3 text-align-center">
+                            <div class="row mt-sm-3 mb-3 mb-sm-0">
+                                <div class="col-12 my-3 my-sm-5">
+                                    <input id="btnsubmit" type="submit" class="btn btn--submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+    </main>
+    <script>
+        (function () {
+            if (typeof _ltk == 'object') { ltkCode(); } else { (function (d) { if (document.addEventListener) document.addEventListener('ltkAsyncListener', d); else { e = document.documentElement; e.ltkAsyncProperty = 0; e.attachEvent('onpropertychange', function (e) { if (e.propertyName == 'ltkAsyncProperty') { d(); } }); } })(function () { ltkCode(); }); } function ltkCode() {
+                _ltk_util.ready(function () {
+                    _ltk.Signup.New("lestienEmailSubscription", "emailInput", _ltk.Signup.TYPE.DEFAULT, "btnsubmit", "email");
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'firstName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'lastName');
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', 'mobilePhone');
+
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', "forHim");
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', "forHer");
+                    _ltk.Signup.SetFieldWithKey('lestienEmailSubscription', "both");
+
+                })
+            }
+        })();
+
+
+
+    </script>
+-->
+
+
+</body>
+
+</html>
